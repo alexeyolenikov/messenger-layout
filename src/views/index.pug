@@ -1,0 +1,20 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+  - const title = "Chat widget Sketch to HTML (no js)"
+  - const avatarMargoBg = "./img/avatar_margo.png"
+  - var chatState = 'empty'
+
+block content
+  main
+    include ../blocks/message-box/message-box.pug
+    
+    - chatState = 'only-messages'
+    include ../blocks/message-box/message-box.pug
+    
+    - chatState = 'messages-with-input'
+    include ../blocks/message-box/message-box.pug
+
+block scripts
+  script(src="./js/main.js")

@@ -1,0 +1,12 @@
+.message-box
+  .message-box__head
+    include ../message-box-header/message-box-header.pug
+  .message-box__body
+    if chatState == 'empty'
+      include ../chat-placeholder/chat-placeholder.pug
+    else
+      .chat-messages-container
+        include ../chat-message/chat-message.pug
+
+  .message-box__form
+    include ../chat-input/chat-input.pug

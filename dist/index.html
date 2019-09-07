@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chat widget Sketch to HTML (no js)</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="./img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="./img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="./img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="./img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="./img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="./styles/main.min.css">
+  </head>
+  <body>
+    <main>
+      <div class="message-box">
+        <div class="message-box__head">
+          <div class="message-box-header">
+            <div class="message-box-header__title">
+              <div class="chat-title">Чат: Тестовый Чат</div>
+              <div class="chat-subtitle">Количество участников безгранично</div>
+            </div>
+            <div class="message-box-header__settings">
+              <div class="chat-settings">
+                <input class="chat-settings__checkbox" type="checkbox" id="checkbox-empty">
+                <label class="chat-settings__btn" for="checkbox-empty"><span class="dots-icon"><span class="dots-icon__item"></span><span class="dots-icon__item"><i class="dots-icon__close"></i></span><span class="dots-icon__item"></span></span></label>
+                <div class="chat-settings__menu">
+                  <div class="chat-option">
+                    <div class="chat-option__title">Уведомления</div>
+                    <div class="chat-option__switcher">
+                      <label class="switch-btn">
+                        <input type="checkbox"/><span class="switch-btn__layer"><span class="switch-btn__switcher"></span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="chat-option">
+                    <div class="chat-option__title">Статус «В сети»</div>
+                    <div class="chat-option__switcher">
+                      <label class="switch-btn">
+                        <input type="checkbox" checked="checked"/><span class="switch-btn__layer"><span class="switch-btn__switcher"></span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-box__body">
+          <div class="chat-placeholder">
+            <div class="chat-placeholder__img"></div>
+            <p class="chat-placeholder__text">Это пустое состояние чата<br>(данная заглушка из картинки и этого текста должна отображаться по центру зоны сообщений пользователей)</p>
+          </div>
+        </div>
+        <div class="message-box__form">
+          <form class="chat-input">
+            <div class="chat-input__message" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="Сообщение..."></div>
+            <div class="chat-input__buttons">
+              <button class="btn-chat-submit" type="submit"><i class="icon-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="message-box">
+        <div class="message-box__head">
+          <div class="message-box-header">
+            <div class="message-box-header__title">
+              <div class="chat-title">Чат: Тестовый Чат</div>
+              <div class="chat-subtitle">Количество участников безгранично</div>
+            </div>
+            <div class="message-box-header__settings">
+              <div class="chat-settings">
+                <input class="chat-settings__checkbox" type="checkbox" id="checkbox-only-messages">
+                <label class="chat-settings__btn" for="checkbox-only-messages"><span class="dots-icon"><span class="dots-icon__item"></span><span class="dots-icon__item"><i class="dots-icon__close"></i></span><span class="dots-icon__item"></span></span></label>
+                <div class="chat-settings__menu">
+                  <div class="chat-option">
+                    <div class="chat-option__title">Уведомления</div>
+                    <div class="chat-option__switcher">
+                      <label class="switch-btn">
+                        <input type="checkbox"/><span class="switch-btn__layer"><span class="switch-btn__switcher"></span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="chat-option">
+                    <div class="chat-option__title">Статус «В сети»</div>
+                    <div class="chat-option__switcher">
+                      <label class="switch-btn">
+                        <input type="checkbox" checked="checked"/><span class="switch-btn__layer"><span class="switch-btn__switcher"></span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-box__body">
+          <div class="chat-messages-container">
+            <div class="chat-message">
+              <div class="chat-message__avatar">
+                <div class="user-photo"></div>
+              </div>
+              <div class="chat-message__body">
+                <p>Sergio</p>
+                <p>Данные макеты должны быть сверстаны таким образом, чтобы отображаться на любых экранах в любом размере (ширина задается в родительском элементе)</p>
+              </div>
+            </div>
+            <div class="chat-message chat-message--stuck">
+              <div class="chat-message__avatar">
+                <div class="user-photo"></div>
+              </div>
+              <div class="chat-message__body">
+                <p>Как вы уже поняли, на втором экране уже появляются сообщения и их может быть довольно много</p>
+              </div>
+            </div>
+            <div class="chat-message chat-message--stuck">
+              <div class="chat-message__avatar">
+                <div class="user-photo"></div>
+              </div>
+              <div class="chat-message__body">
+                <p>Сообщения от одного и того же пользователя «слипаются» (чтобы занимать меньше места)</p>
+              </div>
+            </div>
+            <div class="chat-message">
+              <div class="chat-message__avatar"><img class="user-photo" src="./img/avatar_margo.png" alt="Margo"/>
+              </div>
+              <div class="chat-message__body">
+                <p>Margo</p>
+                <p>Сам чат состоит из трех частей:<br>- заголовка (его высота фиксирована), в котором указано название чата, количество участников и кнопка открытия списка настроек чата;<br>- зоны сообщений пользователей (зона сообщений занимает все свободное от заголовка и блока ввода сообщения место, здесь же и присутствует вертикальный скролл), в которой отображаются сообщения пользователей с указанием автора сообщения (аватарка и имя);<br>- блока ввода сообщений (который растет по мере количества строк в сообщении пользователя, но ограничен максимальной  высотой)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-box__form">
+          <form class="chat-input">
+            <div class="chat-input__message" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="Сообщение..."></div>
+            <div class="chat-input__buttons">
+              <button class="btn-chat-submit" type="submit"><i class="icon-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="message-box">
+        <div class="message-box__head">
+          <div class="message-box-header">
+            <div class="message-box-header__title">
+              <div class="chat-title">Чат: Тестовый Чат</div>
+              <div class="chat-subtitle">Количество участников безгранично</div>
+            </div>
+            <div class="message-box-header__settings">
+              <div class="chat-settings">
+                <input class="chat-settings__checkbox" type="checkbox" id="checkbox-messages-with-input">
+                <label class="chat-settings__btn" for="checkbox-messages-with-input"><span class="dots-icon"><span class="dots-icon__item"></span><span class="dots-icon__item"><i class="dots-icon__close"></i></span><span class="dots-icon__item"></span></span></label>
+                <div class="chat-settings__menu">
+                  <div class="chat-option">
+                    <div class="chat-option__title">Уведомления</div>
+                    <div class="chat-option__switcher">
+                      <label class="switch-btn">
+                        <input type="checkbox"/><span class="switch-btn__layer"><span class="switch-btn__switcher"></span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="chat-option">
+                    <div class="chat-option__title">Статус «В сети»</div>
+                    <div class="chat-option__switcher">
+                      <label class="switch-btn">
+                        <input type="checkbox" checked="checked"/><span class="switch-btn__layer"><span class="switch-btn__switcher"></span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-box__body">
+          <div class="chat-messages-container">
+            <div class="chat-message">
+              <div class="chat-message__avatar">
+                <div class="user-photo"></div>
+              </div>
+              <div class="chat-message__body">
+                <p>Sergio</p>
+                <p>Данные макеты должны быть сверстаны таким образом, чтобы отображаться на любых экранах в любом размере (ширина задается в родительском элементе)</p>
+              </div>
+            </div>
+            <div class="chat-message chat-message--stuck">
+              <div class="chat-message__avatar">
+                <div class="user-photo"></div>
+              </div>
+              <div class="chat-message__body">
+                <p>Как вы уже поняли, на втором экране уже появляются сообщения и их может быть довольно много</p>
+              </div>
+            </div>
+            <div class="chat-message chat-message--stuck">
+              <div class="chat-message__avatar">
+                <div class="user-photo"></div>
+              </div>
+              <div class="chat-message__body">
+                <p>Сообщения от одного и того же пользователя «слипаются» (чтобы занимать меньше места)</p>
+              </div>
+            </div>
+            <div class="chat-message">
+              <div class="chat-message__avatar"><img class="user-photo" src="./img/avatar_margo.png" alt="Margo"/>
+              </div>
+              <div class="chat-message__body">
+                <p>Margo</p>
+                <p>Сам чат состоит из трех частей:<br>- заголовка (его высота фиксирована), в котором указано название чата, количество участников и кнопка открытия списка настроек чата;<br>- зоны сообщений пользователей (зона сообщений занимает все свободное от заголовка и блока ввода сообщения место, здесь же и присутствует вертикальный скролл), в которой отображаются сообщения пользователей с указанием автора сообщения (аватарка и имя);<br>- блока ввода сообщений (который растет по мере количества строк в сообщении пользователя, но ограничен максимальной  высотой)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="message-box__form">
+          <form class="chat-input">
+            <div class="chat-input__message" contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="Сообщение...">
+               Это текстовое растет в высоту по мере ввода пользователем текста. Максимальная высота этой зоны - 164px (размер текста 13px, высота строки 17px).<br>На предыдущем экране пустое состояние этого поля (placeholder сделан с помощью css псевдоклассов :empty и :before). <br>Данное задание реализовано без JS кода (за исключением кода, ограничивающего вставку HTML тегов в поле ввода сообщения).</div>
+            <div class="chat-input__buttons">
+              <button class="btn-chat-submit" type="submit"><i class="icon-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="./js/main.min.js"></script>
+  </body>
+</html>

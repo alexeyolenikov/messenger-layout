@@ -1,0 +1,1 @@
+import "%blocks%/chat-input/chat-input";

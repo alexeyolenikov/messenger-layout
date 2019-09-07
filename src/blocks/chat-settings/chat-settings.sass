@@ -1,0 +1,125 @@
+$closeWidth: 22px
+$closeHeight: 22px
+
+.chat-settings
+	position: relative
+
+	&__btn
+		cursor: pointer
+
+	&__checkbox
+		display: none
+
+	&__menu
+		max-width: 200px
+
+		display: block
+		position: absolute
+		right: 0
+		margin-top: 10px
+		background-color: $colorDarkBlue
+
+		opacity: 0
+		transition: .5s ease
+		z-index: -1
+
+.chat-settings__checkbox:checked ~ .chat-settings__menu
+	opacity: 1
+	z-index: 10
+		
+
+
+.chat-settings__checkbox:checked ~ .chat-settings__btn .dots-icon
+	&__close
+		opacity: 1	
+
+	&__item
+		background-color: #4A8FE2
+		width: $closeWidth
+		height: $closeHeight
+
+		&:first-child
+			margin-right: -$closeWidth
+			opacity: 0
+
+		&:last-child
+			margin-left: -$closeWidth
+			opacity: 0
+
+		&:nth-child(2)
+			margin-right: 0
+			padding: 5px
+		
+
+
+
+.dots-icon
+	display: flex
+	justify-content: center
+	align-items: center
+
+	height: $closeHeight
+	
+	&__item
+		box-sizing: border-box
+		width: 5.41px
+		height: 5.41px
+
+		background-color: $colorDark
+
+		border-radius: 50%
+
+		transition: .5s
+
+		&:not(:last-child)
+			margin-right: 2px
+			text-align: center
+
+	&__close
+		opacity: 0
+		transition: .5s
+
+		display: block
+		width: 2px
+		margin: 0 auto
+		height: 100%
+		position: relative
+		
+		&:after,
+		&:before
+			content: ''
+			height: 100%
+			width: 100%
+			display: block
+			position: absolute
+			background-color: $colorDarkBlue
+			border-radius: 3px
+
+		&:before
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+
+
+.chat-option
+	display: flex
+	align-items: flex-start
+
+	padding: 10px 10px 10px 16px
+
+	&__title
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
+		color: $colorWhite
+		font-size: 13px
+		font-weight: 300
+		padding-right: 20px
+		
+		flex: auto
+
+	&__switcher
+		width: 32px
+		min-width: 32px
+		text-align: right

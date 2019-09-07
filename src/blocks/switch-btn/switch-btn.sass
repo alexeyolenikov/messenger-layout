@@ -1,0 +1,30 @@
+.switch-btn
+  cursor: pointer
+
+  &__layer
+    display: block
+    box-sizing: border-box
+    width: 32px
+    padding: 1px
+    background-color: #2A3E53
+    border-radius: 15px 
+    transition: background-color .5s
+
+  &__switcher
+    display: block
+    width: 18px
+    height: 18px
+    display: block
+    border-radius: 50%
+    background-color: $colorDarkBlue
+    margin-left: 0
+    transition: margin-left .5s
+
+  input
+    display: none
+
+    &:checked ~ .switch-btn__layer
+      background-color: #2EA5FF
+
+      & .switch-btn__switcher
+        margin-left: calc(100% - 18px)

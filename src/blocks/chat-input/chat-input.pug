@@ -1,0 +1,15 @@
+form.chat-input
+  if chatState == 'messages-with-input'
+    div(contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="Сообщение...").chat-input__message  
+      | Это текстовое растет в высоту по мере ввода пользователем текста. Максимальная высота этой зоны - 164px (размер текста 13px, высота строки 17px).
+      br
+      | На предыдущем экране пустое состояние этого поля (placeholder сделан с помощью css псевдоклассов :empty и :before). 
+      br
+      | Данное задание реализовано без JS кода (за исключением кода, ограничивающего вставку HTML тегов в поле ввода сообщения).
+
+  else
+    div(contenteditable="true" role="textbox" aria-multiline="true" data-placeholder="Сообщение...").chat-input__message
+
+  .chat-input__buttons
+    button(type="submit").btn-chat-submit
+      i.icon-plane

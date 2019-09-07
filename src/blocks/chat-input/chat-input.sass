@@ -1,0 +1,51 @@
+.chat-input
+	display: flex
+
+	&__message
+		flex: 100%
+
+		box-sizing: border-box
+
+		outline: none
+		-moz-appearance: none
+		border: none
+		resize: none
+
+		margin: 10px 0
+		padding: 0 5px 0 16px
+		color: $colorWhite
+		font-weight: 300
+
+		overflow: auto
+		overflow-x: hidden
+		word-wrap: break-word
+
+		max-height: 144px
+		cursor: text
+
+		/* Js is better method for placeholder, because Firefox add <br> after edit text in the field */
+		&:empty:before
+			content: attr(data-placeholder)
+			color: $colorDark
+
+	&__buttons
+		display: flex
+
+
+.btn-chat-submit
+	border: none
+	background: none
+	text-decoration: none
+  user-select: none
+	outline: none
+	-moz-appearance: none
+	cursor: pointer
+
+	padding: 16px
+	align-self: flex-end
+
+.icon-plane
+	display: inline-block
+	width: 22px
+	height: 20px
+	background: url('../img/icon-plane.svg') center bottom no-repeat

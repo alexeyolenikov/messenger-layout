@@ -1,0 +1,20 @@
+- var settingCheckboxId = 'checkbox-'+chatState
+
+.chat-settings
+	
+	input(type="checkbox" id=settingCheckboxId).chat-settings__checkbox
+	label(for=settingCheckboxId).chat-settings__btn
+		span.dots-icon
+			span.dots-icon__item
+			span.dots-icon__item
+				i.dots-icon__close
+			span.dots-icon__item
+	.chat-settings__menu
+		.chat-option
+			.chat-option__title Уведомления
+			.chat-option__switcher
+				+switch-btn()
+		.chat-option
+			.chat-option__title Статус «В сети»
+			.chat-option__switcher
+				+switch-btn("", true)

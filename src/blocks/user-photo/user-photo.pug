@@ -1,0 +1,20 @@
+//- Вызов:
+//-   +user-photo("")(src="/userphoto.png", alt="alt")
+mixin user-photo(mods)
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' user-photo--' + modsList[i].trim();
+      }
+    }
+ 
+  //- передан src — это img
+  if (attributes.src)
+    img.user-photo(class=allMods)&attributes(attributes)
+  
+  //- иначе это div
+  else
+    .user-photo(class=allMods)&attributes(attributes)

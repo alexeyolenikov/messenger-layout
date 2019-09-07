@@ -1,0 +1,33 @@
+.message-box
+	width: 100%
+	max-width: 375px
+	height: 667px
+
+	display: flex
+	flex-direction: column
+
+	background-color: $colorDarkBlue
+
+	&__head
+		border-bottom: 1px solid #2A3D52
+		padding: 10px 16px
+
+	&__body
+		flex: auto
+		padding: 0 16px
+
+		overflow: hidden
+
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+
+	&__form
+		border-top: 1px solid #2A3D52
+		flex-shrink: 0
+
+.chat-messages-container
+	max-height: 100%
+	overflow-x: hidden
+	overflow-y: auto
+
